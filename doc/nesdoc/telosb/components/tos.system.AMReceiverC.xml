@@ -1,0 +1,188 @@
+<?xml version="1.0" ?><component abstract="" loc="43:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" nicename="tos.system.AMReceiverC" qname="AMReceiverC">
+      <documentation loc="33:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+        <short>
+ The virtualized AM reception abstraction.</short>
+        <long>
+ The virtualized AM reception abstraction.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="43:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" name="amId" ref="0x2aaaad050060">
+          <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x2aaaab97b5d8"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="55:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="Packet" ref="0x2aaaad050ab0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2aaaabba49f8" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="Receive" ref="0x2aaaad0504d8" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2aaaabb89ab0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="am_id_t" ref="0x2aaaab97b5d8"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="56:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2aaaad04f758" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2aaaabbbc190" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" name="Packet" provided="1" ref="0x2aaaad050ab0">
+      <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2aaaad050ab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2aaaad050e00" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2aaaad04f020" scoped=""/>
+        <function-ref name="getPayload" ref="0x2aaaad04f1a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2aaaad04f330" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2aaaad04f4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" name="Receive" provided="1" ref="0x2aaaad0504d8">
+      <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2aaaad0504d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2aaaad050828" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" name="AMPacket" provided="1" ref="0x2aaaad04f758">
+      <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x2aaaad04f758" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x2aaaad04faa8" scoped=""/>
+        <function-ref name="source" ref="0x2aaaad04fc30" scoped=""/>
+        <function-ref name="address" ref="0x2aaaad04fdb8" scoped=""/>
+        <function-ref name="destination" ref="0x2aaaad04e020" scoped=""/>
+        <function-ref name="setSource" ref="0x2aaaad04e1a8" scoped=""/>
+        <function-ref name="setDestination" ref="0x2aaaad04e330" scoped=""/>
+        <function-ref name="type" ref="0x2aaaad04e4b8" scoped=""/>
+        <function-ref name="setType" ref="0x2aaaad04e640" scoped=""/>
+        <function-ref name="isForMe" ref="0x2aaaad04e7c8" scoped=""/>
+        <function-ref name="setGroup" ref="0x2aaaad04e950" scoped=""/>
+        <function-ref name="localGroup" ref="0x2aaaad04ead8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="64:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc" name="Receive" provided="1" ref="0x2aaaabb89ab0">
+      <component-ref nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2aaaabb89ab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x2aaaab97b5d8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2aaaabb89e00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x2aaaabbbc190">
+      <component-ref nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x2aaaabbbc190" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x2aaaabbbc4e0" scoped=""/>
+        <function-ref name="source" ref="0x2aaaabbbc668" scoped=""/>
+        <function-ref name="address" ref="0x2aaaabbbc7f0" scoped=""/>
+        <function-ref name="destination" ref="0x2aaaabbbc978" scoped=""/>
+        <function-ref name="setSource" ref="0x2aaaabbbcb00" scoped=""/>
+        <function-ref name="setDestination" ref="0x2aaaabbbcc88" scoped=""/>
+        <function-ref name="type" ref="0x2aaaabbbce10" scoped=""/>
+        <function-ref name="setType" ref="0x2aaaabb86020" scoped=""/>
+        <function-ref name="isForMe" ref="0x2aaaabb861a8" scoped=""/>
+        <function-ref name="setGroup" ref="0x2aaaabb86330" scoped=""/>
+        <function-ref name="localGroup" ref="0x2aaaabb864b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc" name="Packet" provided="1" ref="0x2aaaabba49f8">
+      <component-ref nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2aaaabba49f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2aaaabba4d48" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2aaaabb87020" scoped=""/>
+        <function-ref name="getPayload" ref="0x2aaaabb871a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2aaaabb87330" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2aaaabb874b8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="59:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc" nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC">
+      <documentation loc="49:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+        <short>
+
+ The Active Message layer on the Telos platform.</short>
+        <long>
+
+ The Active Message layer on the Telos platform. This is a naming wrapper
+ around the CC2420 Active Message layer.
+
+ @author Philip Levis
+ @version $Revision: 1.9 $ $Date: 2010-06-29 22:07:55 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="78:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2aaaab9d8868" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2aaaabbe5310" scoped=""/></to>
+        </wire>
+        <wire loc="80:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x2aaaabb8a920" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2aaaabbe42b0" scoped=""/></to>
+        </wire>
+        <wire loc="82:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x2aaaabb88628" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x2aaaabbe1020" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x2aaaabba49f8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2aaaabbe0bd8" scoped=""/></to>
+        </wire>
+        <wire loc="89:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x2aaaabba5020" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x2aaaac859130" scoped=""/></to>
+        </wire>
+        <wire loc="86:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x2aaaabbc9848" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x2aaaabbd4628" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x2aaaabb89ab0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2aaaabbe23c8" scoped=""/></to>
+        </wire>
+        <wire loc="85:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x2aaaabbb60d0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x2aaaabbde7e0" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2aaaabbbc190" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2aaaabbe1610" scoped=""/></to>
+        </wire>
+        <wire loc="90:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x2aaaabbade48" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x2aaaac855020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

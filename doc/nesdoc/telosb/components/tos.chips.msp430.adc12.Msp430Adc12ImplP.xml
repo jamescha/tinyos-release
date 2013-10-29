@@ -1,0 +1,374 @@
+<?xml version="1.0" ?><component loc="37:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP" safe="">
+      <module/>
+    <specification><interface loc="42:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="MultiChannel" provided="1" ref="0x2aaaacc8b270">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MultiChannel" ref="0x2aaaacc8b270" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.Msp430Adc12MultiChannel" qname="Msp430Adc12MultiChannel"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getData" ref="0x2aaaacc8b5c0" scoped=""/>
+        <function-ref name="configure" ref="0x2aaaacc8b748" scoped=""/>
+        <function-ref name="dataReady" ref="0x2aaaacc8b8d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="HplAdc12" provided="0" ref="0x2aaaacc7a318">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplAdc12" ref="0x2aaaacc7a318" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.HplAdc12" qname="HplAdc12"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getCtl0" ref="0x2aaaacc7a668" scoped=""/>
+        <function-ref name="getMCtl" ref="0x2aaaacc7a7f0" scoped=""/>
+        <function-ref name="resetIFGs" ref="0x2aaaacc7a978" scoped=""/>
+        <function-ref name="isBusy" ref="0x2aaaacc7ab00" scoped=""/>
+        <function-ref name="conversionDone" ref="0x2aaaacc7ac88" scoped=""/>
+        <function-ref name="getCtl1" ref="0x2aaaacc7ae10" scoped=""/>
+        <function-ref name="setMCtl" ref="0x2aaaacc86020" scoped=""/>
+        <function-ref name="startConversion" ref="0x2aaaacc861a8" scoped=""/>
+        <function-ref name="setCtl0" ref="0x2aaaacc86330" scoped=""/>
+        <function-ref name="getMem" ref="0x2aaaacc864b8" scoped=""/>
+        <function-ref name="setIEFlags" ref="0x2aaaacc86640" scoped=""/>
+        <function-ref name="getIEFlags" ref="0x2aaaacc867c8" scoped=""/>
+        <function-ref name="stopConversion" ref="0x2aaaacc86950" scoped=""/>
+        <function-ref name="enableConversion" ref="0x2aaaacc86bd8" scoped=""/>
+        <function-ref name="setCtl1" ref="0x2aaaacc86d60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port64" provided="0" ref="0x2aaaacc6d628">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port64" ref="0x2aaaacc6d628" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc6d978" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc6db00" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc6dc88" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc6de10" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc6b020" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc6b1a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc6b330" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc6b4b8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc6b640" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc6b7c8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc6b950" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc6bad8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc6bc60" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc6a020" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc6a1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="CompareA1" provided="0" ref="0x2aaaacc76da0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareA1" ref="0x2aaaacc76da0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x2aaaacc75170" scoped=""/>
+        <function-ref name="setEvent" ref="0x2aaaacc752f8" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x2aaaacc75480" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x2aaaacc75608" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaacc75790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="ControlA0" provided="0" ref="0x2aaaacc79858">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlA0" ref="0x2aaaacc79858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x2aaaacc79ba8" scoped=""/>
+        <function-ref name="getControl" ref="0x2aaaacc79d30" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2aaaacc78020" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x2aaaacc781a8" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x2aaaacc78330" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2aaaacc784b8" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x2aaaacc78640" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x2aaaacc787c8" scoped=""/>
+        <function-ref name="setControl" ref="0x2aaaacc78950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="DMAExtension" provided="1" ref="0x2aaaacc88020">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="DMAExtension" ref="0x2aaaacc88020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="start" ref="0x2aaaacc88370" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaacc884f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port62" provided="0" ref="0x2aaaacc71938">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port62" ref="0x2aaaacc71938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc71c88" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc71e10" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc70020" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc701a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc70330" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc704b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc70640" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc707c8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc70950" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc70ad8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc70c60" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc70de8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc6f020" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc6f2a8" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc6f430" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Overflow" provided="1" ref="0x2aaaacc8a1c8">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Overflow" ref="0x2aaaacc8a1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.Msp430Adc12Overflow" qname="Msp430Adc12Overflow"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="memOverflow" ref="0x2aaaacc8a518" scoped=""/>
+        <function-ref name="conversionTimeOverflow" ref="0x2aaaacc8a6a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port67" provided="0" ref="0x2aaaacc66528">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port67" ref="0x2aaaacc66528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc66878" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc66a00" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc66b88" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc66d10" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc65020" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc651a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc65330" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc654b8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc65640" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc657c8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc65950" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc65ad8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc65c60" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc64020" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc641a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port60" provided="0" ref="0x2aaaacc75b10">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port60" ref="0x2aaaacc75b10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc74020" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc741a8" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc74330" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc744b8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc74640" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc747c8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc74950" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc74ad8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc74c60" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc74de8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc73020" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc731a8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc73330" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc735b8" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc73740" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Init" provided="1" ref="0x2aaaacc8d020">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2aaaacc8d020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2aaaacc8d370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port65" provided="0" ref="0x2aaaacc6a528">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port65" ref="0x2aaaacc6a528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc6a878" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc6aa00" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc6ab88" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc6ad10" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc69020" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc691a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc69330" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc694b8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc69640" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc697c8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc69950" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc69ad8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc69c60" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc68020" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc681a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="TimerA" provided="0" ref="0x2aaaacc85100">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerA" ref="0x2aaaacc85100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2aaaacc85450" scoped=""/>
+        <function-ref name="setClockSource" ref="0x2aaaacc855d8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2aaaacc85760" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc858e8" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2aaaacc85a70" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x2aaaacc85bf8" scoped=""/>
+        <function-ref name="getMode" ref="0x2aaaacc85d80" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x2aaaacc79020" scoped=""/>
+        <function-ref name="overflow" ref="0x2aaaacc791a8" scoped=""/>
+        <function-ref name="setMode" ref="0x2aaaacc79330" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x2aaaacc794b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="ADCArbiterInfo" provided="0" ref="0x2aaaacc88900">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ADCArbiterInfo" ref="0x2aaaacc88900" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2aaaacc88c50" scoped=""/>
+        <function-ref name="userId" ref="0x2aaaacc88dd8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="ControlA1" provided="0" ref="0x2aaaacc78cf0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlA1" ref="0x2aaaacc78cf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x2aaaacc770a0" scoped=""/>
+        <function-ref name="getControl" ref="0x2aaaacc77228" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2aaaacc773b0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x2aaaacc77538" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x2aaaacc776c0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2aaaacc77848" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x2aaaacc779d0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x2aaaacc77b58" scoped=""/>
+        <function-ref name="setControl" ref="0x2aaaacc77ce0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="SingleChannel" provided="1" ref="0x2aaaacc8dc68">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SingleChannel" ref="0x2aaaacc8dc68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.Msp430Adc12SingleChannel" qname="Msp430Adc12SingleChannel"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getData" ref="0x2aaaacc8c020" scoped=""/>
+        <function-ref name="configureSingle" ref="0x2aaaacc8c1a8" scoped=""/>
+        <function-ref name="configureSingleRepeat" ref="0x2aaaacc8c330" scoped=""/>
+        <function-ref name="configureMultipleRepeat" ref="0x2aaaacc8c4b8" scoped=""/>
+        <function-ref name="multipleDataReady" ref="0x2aaaacc8c640" scoped=""/>
+        <function-ref name="configureMultiple" ref="0x2aaaacc8c7c8" scoped=""/>
+        <function-ref name="singleDataReady" ref="0x2aaaacc8c950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port63" provided="0" ref="0x2aaaacc6f7b0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port63" ref="0x2aaaacc6f7b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc6fb00" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc6fc88" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc6fe10" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc6e020" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc6e1a8" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc6e330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc6e4b8" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc6e640" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc6e7c8" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc6e950" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc6ead8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc6ec60" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc6ede8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc6d120" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc6d2a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="CompareA0" provided="0" ref="0x2aaaacc760c0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareA0" ref="0x2aaaacc760c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x2aaaacc76410" scoped=""/>
+        <function-ref name="setEvent" ref="0x2aaaacc76598" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x2aaaacc76720" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x2aaaacc768a8" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaacc76a30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port61" provided="0" ref="0x2aaaacc73ac0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port61" ref="0x2aaaacc73ac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc73e10" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc72020" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc721a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc72330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc724b8" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc72640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc727c8" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc72950" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc72ad8" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc72c60" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc72de8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc71020" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc711a8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc71430" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc715b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ImplP.nc" name="Port66" provided="0" ref="0x2aaaacc68528">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ImplP" qname="Msp430Adc12ImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port66" ref="0x2aaaacc68528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2aaaacc68878" scoped=""/>
+        <function-ref name="isInput" ref="0x2aaaacc68a00" scoped=""/>
+        <function-ref name="setResistor" ref="0x2aaaacc68b88" scoped=""/>
+        <function-ref name="toggle" ref="0x2aaaacc68d10" scoped=""/>
+        <function-ref name="isOutput" ref="0x2aaaacc67020" scoped=""/>
+        <function-ref name="getResistor" ref="0x2aaaacc671a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2aaaacc67330" scoped=""/>
+        <function-ref name="get" ref="0x2aaaacc674b8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2aaaacc67640" scoped=""/>
+        <function-ref name="getRaw" ref="0x2aaaacc677c8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaacc67950" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2aaaacc67ad8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2aaaacc67c60" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2aaaacc66020" scoped=""/>
+        <function-ref name="clr" ref="0x2aaaacc661a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

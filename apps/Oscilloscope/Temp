@@ -1,0 +1,13 @@
+mkdir -p build/telosb
+    compiling OscilloscopeAppC to a telosb binary
+ncc -o build/telosb/main.exe  -Os -fnesc-separator=__ -Wall -Wshadow -Wnesc-all -target=telosb -fnesc-cfile=build/telosb/app.c -board=Photo -DDEFINED_TOS_AM_GROUP=0x22 -DIDENT_APPNAME=\"OscilloscopeApp\" -DIDENT_USERNAME=\"doctor\" -DIDENT_HOSTNAME=\"doctor\" -DIDENT_USERHASH=0x197c847aL -DIDENT_TIMESTAMP=0x526b408aL -DIDENT_UIDHASH=0xd978a28cL  OscilloscopeAppC.nc -lm 
+    compiled OscilloscopeAppC to build/telosb/main.exe
+           15728 bytes in ROM
+             482 bytes in RAM
+msp430-objcopy --output-target=ihex build/telosb/main.exe build/telosb/main.ihex
+    writing TOS image
+cp build/telosb/main.ihex build/telosb/main.ihex.out
+    found mote on /dev/ttyUSB0 (using bsl,auto)
+    installing telosb binary using bsl
+tos-bsl --telosb -c /dev/ttyUSB0 -r -e -I -p build/telosb/main.ihex.out
+rm -f build/telosb/main.exe.out build/telosb/main.ihex.out 

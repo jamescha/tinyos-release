@@ -1,0 +1,523 @@
+<?xml version="1.0" ?><component loc="19:OscilloscopeAppC.nc" nicename="OscilloscopeAppC" qname="OscilloscopeAppC">
+      <documentation loc="11:OscilloscopeAppC.nc">
+        <short>
+ Oscilloscope demo application.</short>
+        <long>
+ Oscilloscope demo application. Uses the demo sensor - change the
+ new DemoSensorC() instantiation if you want something else.
+
+ See README.txt file in this directory for usage instructions.
+
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="26:OscilloscopeAppC.nc">
+          <from><interface-ref name="Boot" ref="0x2aaaab9253e0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2aaaab92fa70" scoped=""/></to>
+        </wire>
+        <wire loc="27:OscilloscopeAppC.nc">
+          <from><interface-ref name="RadioControl" ref="0x2aaaab922be0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2aaaab9d8868" scoped=""/></to>
+        </wire>
+        <wire loc="28:OscilloscopeAppC.nc">
+          <from><interface-ref name="AMSend" ref="0x2aaaab97d278" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2aaaad058080" scoped=""/></to>
+        </wire>
+        <wire loc="29:OscilloscopeAppC.nc">
+          <from><interface-ref name="Receive" ref="0x2aaaab9987d0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2aaaad04c1c8" scoped=""/></to>
+        </wire>
+        <wire loc="30:OscilloscopeAppC.nc">
+          <from><interface-ref name="Timer" ref="0x2aaaab98f4f8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2aaaacba0d10" scoped=""/></to>
+        </wire>
+        <wire loc="31:OscilloscopeAppC.nc">
+          <from><interface-ref name="Read" ref="0x2aaaab9a64e8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2aaaacb971e8" scoped=""/></to>
+        </wire>
+        <wire loc="32:OscilloscopeAppC.nc">
+          <from><interface-ref name="Leds" ref="0x2aaaab9a9080" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2aaaac445e38" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="49:/home/doctor/tinyos-release/tos/system/AMSenderC.nc" name="AMSend" provided="1" ref="0x2aaaad058080">
+      <component-ref nicename="tos.system.AMSenderC" qname="OscilloscopeAppC.AMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2aaaad058080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2aaaad0583d0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2aaaad058558" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2aaaad0586e0" scoped=""/>
+        <function-ref name="cancel" ref="0x2aaaad058868" scoped=""/>
+        <function-ref name="sendDone" ref="0x2aaaad0589f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc" name="SplitControl" provided="1" ref="0x2aaaab9d8868">
+      <component-ref nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x2aaaab9d8868" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2aaaab9d8bb8" scoped=""/>
+        <function-ref name="stopDone" ref="0x2aaaab9d8d40" scoped=""/>
+        <function-ref name="start" ref="0x2aaaabb8a020" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaabb8a1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:OscilloscopeC.nc" name="Boot" provided="0" ref="0x2aaaab9253e0">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2aaaab9253e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2aaaab925730" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/doctor/tinyos-release/tos/platforms/telosb/DemoSensorC.nc" name="Read" provided="1" ref="0x2aaaacb971e8">
+      <component-ref nicename="tos.platforms.telosb.DemoSensorC" qname="OscilloscopeAppC.Sensor"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2aaaacb971e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2aaaaab74b20"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2aaaacb97d30" scoped=""/>
+        <function-ref name="readDone" ref="0x2aaaacfe91c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/doctor/tinyos-release/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x2aaaac445e38">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2aaaac445e38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2aaaac4421c0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2aaaac442348" scoped=""/>
+        <function-ref name="led1On" ref="0x2aaaac4424d0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2aaaac442658" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2aaaac4427e0" scoped=""/>
+        <function-ref name="get" ref="0x2aaaac442968" scoped=""/>
+        <function-ref name="led1Off" ref="0x2aaaac442af0" scoped=""/>
+        <function-ref name="led2Off" ref="0x2aaaac4411a8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaac442c78" scoped=""/>
+        <function-ref name="led0On" ref="0x2aaaac442e00" scoped=""/>
+        <function-ref name="led2On" ref="0x2aaaac441020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:OscilloscopeC.nc" name="AMSend" provided="0" ref="0x2aaaab97d278">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2aaaab97d278" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2aaaab97d5c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x2aaaab97d750" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2aaaab97d8d8" scoped=""/>
+        <function-ref name="cancel" ref="0x2aaaab97da60" scoped=""/>
+        <function-ref name="sendDone" ref="0x2aaaab97dbe8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:OscilloscopeC.nc" name="Leds" provided="0" ref="0x2aaaab9a9080">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2aaaab9a9080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2aaaab9a93d0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2aaaab9a9558" scoped=""/>
+        <function-ref name="led1On" ref="0x2aaaab9a96e0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2aaaab9a9868" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2aaaab9a99f0" scoped=""/>
+        <function-ref name="get" ref="0x2aaaab9a9b78" scoped=""/>
+        <function-ref name="led1Off" ref="0x2aaaab9a9d00" scoped=""/>
+        <function-ref name="led2Off" ref="0x2aaaab9a54b8" scoped=""/>
+        <function-ref name="set" ref="0x2aaaab9a5020" scoped=""/>
+        <function-ref name="led0On" ref="0x2aaaab9a51a8" scoped=""/>
+        <function-ref name="led2On" ref="0x2aaaab9a5330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" name="Receive" provided="1" ref="0x2aaaad04c1c8">
+      <component-ref nicename="tos.system.AMReceiverC" qname="OscilloscopeAppC.AMReceiverC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2aaaad04c1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2aaaad04c518" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/doctor/tinyos-release/tos/system/MainC.nc" name="Boot" provided="1" ref="0x2aaaab92fa70">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2aaaab92fa70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2aaaab92fdc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:OscilloscopeC.nc" name="Timer" provided="0" ref="0x2aaaab98f4f8">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2aaaab98f4f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2aaaab92e560"/>
+            <typename><typedef-ref name="TMilli" ref="0x2aaaab92ecb8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2aaaab98d768" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaab93fe18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2aaaab98eb78" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2aaaab98e728" scoped=""/>
+        <function-ref name="getdt" ref="0x2aaaab98c088" scoped=""/>
+        <function-ref name="gett0" ref="0x2aaaab98dbb8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2aaaab98e2d8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2aaaab93f088" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2aaaab98d198" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2aaaab93f528" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaab93f9c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/doctor/tinyos-release/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2aaaacba0d10">
+      <component-ref nicename="tos.system.TimerMilliC" qname="OscilloscopeAppC.TimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2aaaacba0d10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2aaaab92e560"/>
+            <typename><typedef-ref name="TMilli" ref="0x2aaaab92ecb8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2aaaacb9b088" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaacb9d688" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2aaaacb9c470" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2aaaacb9c020" scoped=""/>
+        <function-ref name="getdt" ref="0x2aaaacb9b928" scoped=""/>
+        <function-ref name="gett0" ref="0x2aaaacb9b4d8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2aaaacb9dad8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2aaaacb9e8b8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2aaaacb9ca40" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2aaaacb9ed58" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaacb9d238" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:OscilloscopeC.nc" name="RadioControl" provided="0" ref="0x2aaaab922be0">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RadioControl" ref="0x2aaaab922be0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2aaaab928020" scoped=""/>
+        <function-ref name="stopDone" ref="0x2aaaab9281a8" scoped=""/>
+        <function-ref name="start" ref="0x2aaaab928330" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaab9284b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:OscilloscopeC.nc" name="Read" provided="0" ref="0x2aaaab9a64e8">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2aaaab9a64e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2aaaaab74b20"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2aaaab98b088" scoped=""/>
+        <function-ref name="readDone" ref="0x2aaaab98b4d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:OscilloscopeC.nc" name="Receive" provided="0" ref="0x2aaaab9987d0">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2aaaab9987d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2aaaab998b20" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44(OscilloscopeAppC.TimerMilliC):/home/doctor/tinyos-release/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="OscilloscopeAppC.TimerMilliC">
+      <documentation loc="33:/home/doctor/tinyos-release/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/home/doctor/tinyos-release/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x2aaaacba0d10" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2aaaac99e6a0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="43(OscilloscopeAppC.AMReceiverC):/home/doctor/tinyos-release/tos/system/AMReceiverC.nc" nicename="tos.system.AMReceiverC" qname="OscilloscopeAppC.AMReceiverC">
+      <documentation loc="33:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+        <short>
+ The virtualized AM reception abstraction.</short>
+        <long>
+ The virtualized AM reception abstraction.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+        <arguments>
+          <value cst="I:147">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="55:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="Packet" ref="0x2aaaad04c760" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2aaaabba49f8" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="Receive" ref="0x2aaaad04c1c8" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2aaaabb89ab0" scoped=""/>
+          <arguments>
+            <value cst="I:147">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="am_id_t" ref="0x2aaaab97b5d8"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="56:/home/doctor/tinyos-release/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2aaaad04a3f0" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2aaaabbbc190" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="59:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc" nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC">
+      <documentation loc="49:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+        <short>
+
+ The Active Message layer on the Telos platform.</short>
+        <long>
+
+ The Active Message layer on the Telos platform. This is a naming wrapper
+ around the CC2420 Active Message layer.
+
+ @author Philip Levis
+ @version $Revision: 1.9 $ $Date: 2010-06-29 22:07:55 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="78:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2aaaab9d8868" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2aaaabbe5310" scoped=""/></to>
+        </wire>
+        <wire loc="80:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x2aaaabb8a920" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2aaaabbe42b0" scoped=""/></to>
+        </wire>
+        <wire loc="82:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x2aaaabb88628" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x2aaaabbe1020" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x2aaaabba49f8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2aaaabbe0bd8" scoped=""/></to>
+        </wire>
+        <wire loc="89:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x2aaaabba5020" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x2aaaac859130" scoped=""/></to>
+        </wire>
+        <wire loc="86:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x2aaaabbc9848" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x2aaaabbd4628" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x2aaaabb89ab0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2aaaabbe23c8" scoped=""/></to>
+        </wire>
+        <wire loc="85:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x2aaaabbb60d0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x2aaaabbde7e0" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2aaaabbbc190" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2aaaabbe1610" scoped=""/></to>
+        </wire>
+        <wire loc="90:/home/doctor/tinyos-release/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x2aaaabbade48" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x2aaaac855020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="49(OscilloscopeAppC.Sensor):/home/doctor/tinyos-release/tos/platforms/telosb/DemoSensorC.nc" nicename="tos.platforms.telosb.DemoSensorC" qname="OscilloscopeAppC.Sensor">
+      <documentation loc="32:/home/doctor/tinyos-release/tos/platforms/telosb/DemoSensorC.nc">
+        <short> 
+ DemoSensorC is a generic sensor device that provides a 16-bit
+ value.</short>
+        <long> 
+ DemoSensorC is a generic sensor device that provides a 16-bit
+ value. The platform author chooses which sensor actually sits
+ behind DemoSensorC, and though it's probably Voltage, Light, or
+ Temperature, there are no guarantees.
+
+ This particular DemoSensorC on the telosb platform provides a
+ voltage reading, using VoltageC. 
+
+ To convert from ADC counts to actual voltage, divide this reading
+ by 4096 and multiply by 3.
+
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006-12-12 18:23:45 $
+ 
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.platforms.telosb.DemoSensorC" qname="DemoSensorC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="56:/home/doctor/tinyos-release/tos/platforms/telosb/DemoSensorC.nc">
+          <from><interface-ref name="Read" ref="0x2aaaacb971e8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2aaaad867420" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="19:OscilloscopeC.nc" nicename="OscilloscopeC" qname="OscilloscopeC" safe="">
+      <module/>
+    </component><component loc="45:/home/doctor/tinyos-release/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/home/doctor/tinyos-release/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/home/doctor/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x2aaaac445e38" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2aaaac43e648" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/doctor/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x2aaaac4688f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2aaaac43e080" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/doctor/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x2aaaac43dce8" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x2aaaac43f4f8" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/doctor/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x2aaaac43ce70" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x2aaaac46a688" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/doctor/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x2aaaac43a020" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x2aaaac469810" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/home/doctor/tinyos-release/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/doctor/tinyos-release/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/doctor/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2aaaab92fa70" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2aaaab9d5c40" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/doctor/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2aaaabb7c308" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2aaaab4b0390" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/doctor/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2aaaabb7cce0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2aaaab9d6e20" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/doctor/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2aaaabb95418" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2aaaab9d6020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="47(OscilloscopeAppC.AMSenderC):/home/doctor/tinyos-release/tos/system/AMSenderC.nc" nicename="tos.system.AMSenderC" qname="OscilloscopeAppC.AMSenderC">
+      <documentation loc="33:/home/doctor/tinyos-release/tos/system/AMSenderC.nc">
+        <short>
+ The virtualized active message send abstraction.</short>
+        <long>
+ The virtualized active message send abstraction. Each instantiation
+ of AMSenderC has its own queue of depth one. Therefore, it does not
+ have to contend with other AMSenderC instantiations for queue space.
+ The underlying implementation schedules the packets in these queues
+ using some form of fair-share queueing.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.AMSenderC" qname="AMSenderC"/>
+        <arguments>
+          <value cst="I:147">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="64:/home/doctor/tinyos-release/tos/system/AMSenderC.nc">
+          <from><interface-ref name="AMSend" ref="0x2aaaad058080" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2aaaad9ba020" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/doctor/tinyos-release/tos/system/AMSenderC.nc">
+          <from><interface-ref name="Packet" ref="0x2aaaad058c38" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2aaaad9babd8" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/doctor/tinyos-release/tos/system/AMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2aaaad056888" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2aaaad9b9888" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/doctor/tinyos-release/tos/system/AMSenderC.nc">
+          <from><interface-ref name="Acks" ref="0x2aaaad054020" scoped=""/></from>
+          <to><interface-ref name="Acks" ref="0x2aaaad9b7020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

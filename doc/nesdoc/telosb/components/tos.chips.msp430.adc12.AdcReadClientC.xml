@@ -1,0 +1,228 @@
+<?xml version="1.0" ?><component abstract="" loc="47:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc" nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="AdcReadClientC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="65:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc">
+          <from><interface-ref name="Read" ref="0x2aaaacbcb340" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2aaaacbc3370" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="66:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc">
+          <from><interface-ref name="Config" ref="0x2aaaacc2b8f0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="AdcConfigure" ref="0x2aaaacbc81c0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc">
+          <from><interface-ref name="SingleChannel" ref="0x2aaaacc19ab8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Msp430Adc12SingleChannel" ref="0x2aaaacea2bd8" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc">
+          <from><interface-ref name="ResourceRead" ref="0x2aaaacbbc1c8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2aaaacea2020" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc">
+          <from><interface-ref name="AdcConfigure" ref="0x2aaaacea0e50" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2aaaacbc81c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="48:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc" name="Read" provided="1" ref="0x2aaaacbcb340">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="AdcReadClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2aaaacbcb340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2aaaaab74b20"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2aaaacbca020" scoped=""/>
+        <function-ref name="readDone" ref="0x2aaaacbca470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcReadClientC.nc" name="AdcConfigure" provided="0" ref="0x2aaaacbc81c0">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="AdcReadClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x2aaaacbc81c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2aaaacbe2de8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2aaaacbe2520"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2aaaacbc8d40" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="46:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ClientAutoRVGC.nc" name="Resource" provided="1" ref="0x2aaaacea2020">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ClientAutoRVGC" qname="AdcReadClientC.Msp430AdcClient"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2aaaacea2020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaacea2370" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaacea24f8" scoped=""/>
+        <function-ref name="request" ref="0x2aaaacea2680" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaacea2808" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaacea2990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ClientAutoRVGC.nc" name="Msp430Adc12SingleChannel" provided="1" ref="0x2aaaacea2bd8">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ClientAutoRVGC" qname="AdcReadClientC.Msp430AdcClient"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Adc12SingleChannel" ref="0x2aaaacea2bd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.Msp430Adc12SingleChannel" qname="Msp430Adc12SingleChannel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x2aaaacea1020" scoped=""/>
+        <function-ref name="configureSingle" ref="0x2aaaacea11a8" scoped=""/>
+        <function-ref name="configureSingleRepeat" ref="0x2aaaacea1330" scoped=""/>
+        <function-ref name="configureMultipleRepeat" ref="0x2aaaacea14b8" scoped=""/>
+        <function-ref name="multipleDataReady" ref="0x2aaaacea1640" scoped=""/>
+        <function-ref name="configureMultiple" ref="0x2aaaacea17c8" scoped=""/>
+        <function-ref name="singleDataReady" ref="0x2aaaacea1950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="Read" provided="1" ref="0x2aaaacbc3370">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2aaaacbc3370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2aaaaab74b20"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2aaaacbc2020" scoped=""/>
+        <function-ref name="readDone" ref="0x2aaaacbc2470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="SingleChannel" provided="0" ref="0x2aaaacc19ab8">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SingleChannel" ref="0x2aaaacc19ab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.Msp430Adc12SingleChannel" qname="Msp430Adc12SingleChannel"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getData" ref="0x2aaaacc19e08" scoped=""/>
+        <function-ref name="configureSingle" ref="0x2aaaacc28020" scoped=""/>
+        <function-ref name="configureSingleRepeat" ref="0x2aaaacc281a8" scoped=""/>
+        <function-ref name="configureMultipleRepeat" ref="0x2aaaacc28330" scoped=""/>
+        <function-ref name="multipleDataReady" ref="0x2aaaacc284b8" scoped=""/>
+        <function-ref name="configureMultiple" ref="0x2aaaacc28640" scoped=""/>
+        <function-ref name="singleDataReady" ref="0x2aaaacc287c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="Config" provided="0" ref="0x2aaaacc2b8f0">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Config" ref="0x2aaaacc2b8f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2aaaacbe2de8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2aaaacbe2520"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2aaaacc2a4c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ClientAutoRVGC.nc" name="AdcConfigure" provided="0" ref="0x2aaaacea0e50">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ClientAutoRVGC" qname="AdcReadClientC.Msp430AdcClient"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x2aaaacea0e50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2aaaacbe2de8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2aaaacbe2520"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2aaaace9fa18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="ResourceRead" provided="0" ref="0x2aaaacbbc1c8">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceRead" ref="0x2aaaacbbc1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaacbbc518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaacbbc6a0" scoped=""/>
+        <function-ref name="request" ref="0x2aaaacbbc828" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaacbbc9b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaacbbcb38" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="43(AdcReadClientC.Msp430AdcClient):/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ClientAutoRVGC.nc" nicename="tos.chips.msp430.adc12.Msp430Adc12ClientAutoRVGC" qname="AdcReadClientC.Msp430AdcClient">
+      <documentation loc="33:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430Adc12ClientAutoRVGC.nc">
+        <short> 
+ This component virtualizes access to the HAL of the MSP430 ADC12.</short>
+        <long> 
+ This component virtualizes access to the HAL of the MSP430 ADC12.
+ Reference voltage is enabled automatically as required by the configuration.
+ 
+ @author Jan Hauer 
+
+ @see  Please refer to the README.txt and TEP 101 for more information about
+ this component and its intended use.
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.adc12.Msp430Adc12ClientAutoRVGC" qname="Msp430Adc12ClientAutoRVGC"/>
+      </instance>
+      <configuration/>
+    </component><component loc="36:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP" safe="">
+      <module/>
+    </component></referenced></component>

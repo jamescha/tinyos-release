@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><component loc="36:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP">
+      <module/>
+    <specification><interface loc="43:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="HplAdc12" provided="0" ref="0x2aaaacdffb28">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplAdc12" ref="0x2aaaacdffb28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.HplAdc12" qname="HplAdc12"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getCtl0" ref="0x2aaaacdffe78" scoped=""/>
+        <function-ref name="getMCtl" ref="0x2aaaacdfe030" scoped=""/>
+        <function-ref name="resetIFGs" ref="0x2aaaacdfe1b8" scoped=""/>
+        <function-ref name="isBusy" ref="0x2aaaacdfe340" scoped=""/>
+        <function-ref name="conversionDone" ref="0x2aaaacdfe4c8" scoped=""/>
+        <function-ref name="getCtl1" ref="0x2aaaacdfe650" scoped=""/>
+        <function-ref name="setMCtl" ref="0x2aaaacdfe7d8" scoped=""/>
+        <function-ref name="startConversion" ref="0x2aaaacdfe960" scoped=""/>
+        <function-ref name="setCtl0" ref="0x2aaaacdfeae8" scoped=""/>
+        <function-ref name="getMem" ref="0x2aaaacdfec70" scoped=""/>
+        <function-ref name="setIEFlags" ref="0x2aaaacdfedf8" scoped=""/>
+        <function-ref name="getIEFlags" ref="0x2aaaacdfd020" scoped=""/>
+        <function-ref name="stopConversion" ref="0x2aaaacdfd1a8" scoped=""/>
+        <function-ref name="enableConversion" ref="0x2aaaacdfd430" scoped=""/>
+        <function-ref name="setCtl1" ref="0x2aaaacdfd5b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="SwitchOffTimer" provided="0" ref="0x2aaaacdf9c70">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SwitchOffTimer" ref="0x2aaaacdf9c70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2aaaab92e560"/>
+            <typename><typedef-ref name="TMilli" ref="0x2aaaab92ecb8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2aaaacdf5e78" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaacdf65a8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2aaaacdf52d8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2aaaacdf6e48" scoped=""/>
+        <function-ref name="getdt" ref="0x2aaaacdf4748" scoped=""/>
+        <function-ref name="gett0" ref="0x2aaaacdf42f8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2aaaacdf69f8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2aaaacdf77e8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2aaaacdf58a8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2aaaacdf7c88" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaacdf6158" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="RefVolt_2_5V" provided="1" ref="0x2aaaacdff020">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_2_5V" ref="0x2aaaacdff020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2aaaacdff370" scoped=""/>
+        <function-ref name="stopDone" ref="0x2aaaacdff4f8" scoped=""/>
+        <function-ref name="start" ref="0x2aaaacdff680" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaacdff808" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="SwitchOffSettleTimer" provided="0" ref="0x2aaaacdf4db0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SwitchOffSettleTimer" ref="0x2aaaacdf4db0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2aaaab92e560"/>
+            <typename><typedef-ref name="TMilli" ref="0x2aaaab92ecb8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2aaaacdee088" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaacdf1708" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2aaaacdf0470" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2aaaacdf0020" scoped=""/>
+        <function-ref name="getdt" ref="0x2aaaacdee928" scoped=""/>
+        <function-ref name="gett0" ref="0x2aaaacdee4d8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2aaaacdf1b58" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2aaaacdf2930" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2aaaacdf0a40" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2aaaacdf2dd0" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaacdf12b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="RefVolt_1_5V" provided="1" ref="0x2aaaace01368">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_1_5V" ref="0x2aaaace01368" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2aaaace016b8" scoped=""/>
+        <function-ref name="stopDone" ref="0x2aaaace01840" scoped=""/>
+        <function-ref name="start" ref="0x2aaaace019c8" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaace01b50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="SwitchOnTimer" provided="0" ref="0x2aaaacdfda48">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SwitchOnTimer" ref="0x2aaaacdfda48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2aaaab92e560"/>
+            <typename><typedef-ref name="TMilli" ref="0x2aaaab92ecb8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2aaaacdfad60" scoped=""/>
+        <function-ref name="fired" ref="0x2aaaacdfb470" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2aaaacdfa1c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2aaaacdfbd10" scoped=""/>
+        <function-ref name="getdt" ref="0x2aaaacdf9648" scoped=""/>
+        <function-ref name="gett0" ref="0x2aaaacdf91f8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2aaaacdfb8c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2aaaacdfc620" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2aaaacdfa790" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2aaaacdfcac0" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaacdfb020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

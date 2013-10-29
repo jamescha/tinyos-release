@@ -1,0 +1,149 @@
+<?xml version="1.0" ?><component loc="36:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP" safe="">
+      <module/>
+    <specification><interface loc="46:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="SubResourceReadNow" provided="0" ref="0x2aaaacbbb440">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubResourceReadNow" ref="0x2aaaacbbb440" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaacbbb790" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaacbbb918" scoped=""/>
+        <function-ref name="request" ref="0x2aaaacbbbaa0" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaacbbbc28" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaacbbbdb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="Read" provided="1" ref="0x2aaaacbc3370">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2aaaacbc3370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2aaaaab74b20"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2aaaacbc2020" scoped=""/>
+        <function-ref name="readDone" ref="0x2aaaacbc2470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="ReadNow" provided="1" ref="0x2aaaacbc01c8">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadNow" ref="0x2aaaacbc01c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadNow" qname="ReadNow"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2aaaaab74b20"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2aaaacbc0d48" scoped=""/>
+        <function-ref name="readDone" ref="0x2aaaacbbf1f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="ResourceReadNow" provided="1" ref="0x2aaaacbbfd98">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceReadNow" ref="0x2aaaacbbfd98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaacbbe170" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaacbbe2f8" scoped=""/>
+        <function-ref name="request" ref="0x2aaaacbbe480" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaacbbe608" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaacbbe790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="Config" provided="0" ref="0x2aaaacc2b8f0">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Config" ref="0x2aaaacc2b8f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2aaaacbe2de8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2aaaacbe2520"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2aaaacc2a4c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="SingleChannel" provided="0" ref="0x2aaaacc19ab8">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SingleChannel" ref="0x2aaaacc19ab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.Msp430Adc12SingleChannel" qname="Msp430Adc12SingleChannel"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getData" ref="0x2aaaacc19e08" scoped=""/>
+        <function-ref name="configureSingle" ref="0x2aaaacc28020" scoped=""/>
+        <function-ref name="configureSingleRepeat" ref="0x2aaaacc281a8" scoped=""/>
+        <function-ref name="configureMultipleRepeat" ref="0x2aaaacc28330" scoped=""/>
+        <function-ref name="multipleDataReady" ref="0x2aaaacc284b8" scoped=""/>
+        <function-ref name="configureMultiple" ref="0x2aaaacc28640" scoped=""/>
+        <function-ref name="singleDataReady" ref="0x2aaaacc287c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="ResourceRead" provided="0" ref="0x2aaaacbbc1c8">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceRead" ref="0x2aaaacbbc1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaacbbc518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaacbbc6a0" scoped=""/>
+        <function-ref name="request" ref="0x2aaaacbbc828" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaacbbc9b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaacbbcb38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="136:/home/doctor/tinyos-release/tos/chips/msp430/adc12/AdcP.nc" name="readDone" provided="0" ref="0x2aaaacbfd590">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readDone" ref="0x2aaaacbfd590" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2aaaacbfd8e0" scoped=""/>
+        <function-ref name="runTask" ref="0x2aaaacbfda68" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

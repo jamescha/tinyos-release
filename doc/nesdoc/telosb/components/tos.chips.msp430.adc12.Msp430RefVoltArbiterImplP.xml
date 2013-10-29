@@ -1,0 +1,95 @@
+<?xml version="1.0" ?><component loc="36:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP">
+      <module/>
+    <specification><interface loc="43:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="Config" provided="0" ref="0x2aaaace8a1c8">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Config" ref="0x2aaaace8a1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2aaaacbe2de8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2aaaacbe2520"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2aaaace8ad48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="RefVolt_2_5V" provided="0" ref="0x2aaaace8cd70">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_2_5V" ref="0x2aaaace8cd70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2aaaace8b0f0" scoped=""/>
+        <function-ref name="stopDone" ref="0x2aaaace8b278" scoped=""/>
+        <function-ref name="start" ref="0x2aaaace8b400" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaace8b588" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="AdcResource" provided="0" ref="0x2aaaace8d4c0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcResource" ref="0x2aaaace8d4c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaace8d810" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaace8d998" scoped=""/>
+        <function-ref name="request" ref="0x2aaaace8db20" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaace8dca8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaace8de30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="ClientResource" provided="1" ref="0x2aaaace8e208">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2aaaace8e208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2aaaace8e558" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2aaaace8e6e0" scoped=""/>
+        <function-ref name="request" ref="0x2aaaace8e868" scoped=""/>
+        <function-ref name="granted" ref="0x2aaaace8e9f0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2aaaace8eb78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="switchOff" provided="0" ref="0x2aaaace87910">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="switchOff" ref="0x2aaaace87910" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2aaaace87c60" scoped=""/>
+        <function-ref name="runTask" ref="0x2aaaace87de8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/doctor/tinyos-release/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="RefVolt_1_5V" provided="0" ref="0x2aaaace8c200">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_1_5V" ref="0x2aaaace8c200" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2aaaace8c550" scoped=""/>
+        <function-ref name="stopDone" ref="0x2aaaace8c6d8" scoped=""/>
+        <function-ref name="start" ref="0x2aaaace8c860" scoped=""/>
+        <function-ref name="stop" ref="0x2aaaace8c9e8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

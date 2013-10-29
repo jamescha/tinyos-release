@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><component loc="64:/home/doctor/tinyos-release/tos/system/StateImplP.nc" nicename="tos.system.StateImplP" qname="StateImplP" safe="">
+      <documentation loc="32:/home/doctor/tinyos-release/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="66:/home/doctor/tinyos-release/tos/system/StateImplP.nc" name="Init" provided="1" ref="0x2aaaac27c5d8">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2aaaac27c5d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2aaaac27c928" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/doctor/tinyos-release/tos/system/StateImplP.nc" name="State" provided="1" ref="0x2aaaac27b1c8">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x2aaaac27b1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2aaaaab74790"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x2aaaac27b518" scoped=""/>
+        <function-ref name="toIdle" ref="0x2aaaac27b6a0" scoped=""/>
+        <function-ref name="isState" ref="0x2aaaac27b828" scoped=""/>
+        <function-ref name="isIdle" ref="0x2aaaac27b9b0" scoped=""/>
+        <function-ref name="requestState" ref="0x2aaaac27bb38" scoped=""/>
+        <function-ref name="forceState" ref="0x2aaaac27bcc0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>
