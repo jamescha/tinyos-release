@@ -15,6 +15,7 @@
  */
 #include "Timer.h"
 #include "Oscilloscope.h"
+#include "printf.h"
 
 module OscilloscopeC @safe()
 {
@@ -131,6 +132,9 @@ implementation
   }
 
   event void Read.readDone(error_t result, uint16_t data) {
+    uint16_t temp = ((data - 630)*761)/1024;
+    if (result == SUCCESS) printf("Temperature = %d\n", temp);
+    printfflush();
     if (result != SUCCESS)
       {
 	data = 0xffff;

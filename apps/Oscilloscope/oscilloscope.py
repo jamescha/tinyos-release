@@ -24,6 +24,6 @@ while True:
     p = am.read()
     if p and p.type == AM_OSCILLOSCOPE:
         msg = OscilloscopeMsg(p.data)
-        print msg.id, msg.count, [i<<8 | j for (i,j) in zip(msg.readings[::2], msg.readings[1::2])]
+        print msg.id, msg.count, "Message:::", [i<<8 | j for (i,j) in zip(msg.readings[::2], msg.readings[1::2])]
         #print msg
 

@@ -16,12 +16,18 @@
  *
  * @author David Gay
  */
+
+#define NEW_PRINTF_SEMANTICS
+#include "printf.h"
+
 configuration OscilloscopeAppC { }
 implementation
 {
   components OscilloscopeC, MainC, ActiveMessageC, LedsC,
     new TimerMilliC(), new DemoSensorT() as Sensor, 
     new AMSenderC(AM_OSCILLOSCOPE), new AMReceiverC(AM_OSCILLOSCOPE);
+  components PrintfC;
+  components SerialStartC;
 
   OscilloscopeC.Boot -> MainC;
   OscilloscopeC.RadioControl -> ActiveMessageC;
